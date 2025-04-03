@@ -1,24 +1,22 @@
-# string-calculator-app
+String Calculator
+  - This is a Vue 3-based string calculator that parses and sums numbers from an input string. It supports multiple delimiters, detects invalid inputs, and provides a simple user interface for calculations.
 
-## Project setup
-```
-yarn install
-```
+Features:
+  - Supports multiple delimiters (,, \n, custom)
+  - Restricts negative numbers
+  - Simple Vue 3 UI
+  - Lightweight and easy to use
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
+Tech Stack:
+  - Frontend: Vue 3, JavaScript, HTML, CSS
+  - Build Tool: Vue CLI
 
-### Compiles and minifies for production
-```
-yarn build
-```
-
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Getting Started:
+  - Clone the repository:
+  - git clone git@github.com:shivamkumar118/string-calculator.git
+  - Navigate to the project folder:
+  - cd string-calculator
+  - Install dependencies using Yarn:
+    - yarn install
+  - Start the development server:
+    - yarn dev
