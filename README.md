@@ -23,4 +23,4 @@ Getting Started:
 
 **DEMO Live URL**
 
-https://shivam-frontend-apps.netlify.app/
+https://smart-string-calc.netlify.app/
