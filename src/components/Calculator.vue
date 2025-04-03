@@ -18,6 +18,9 @@ export default {
     };
   },
   methods: {
+    calculate() {
+      this.result = this.add(this.inputString);
+    },
     add(numbers) {
       if (!numbers) return 0;
 
