@@ -1,18 +1,30 @@
 <template>
-  <StringCalculator />
+  <div class="app-container">
+    <StringCalculator />
+  </div>
 </template>
 
 <script>
 import StringCalculator from "./components/StringCalculator.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    StringCalculator
-  }
-}
+    StringCalculator,
+  },
+};
 </script>
 
 <style>
+body {
+  background: #f4f4f4;
+  font-family: Arial, sans-serif;
+}
 
+.app-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
 </style>
