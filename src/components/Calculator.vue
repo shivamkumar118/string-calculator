@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="calculator">
     <h1>String Calculator</h1>
     <input placeholder="Enter numbers" />
     <button>Calculate</button>
@@ -18,3 +18,11 @@ export default {
   },
 };
 </script>
+
+<style>
+  .calculator {
+    max-width: 400px;
+    margin: auto;
+    text-align: center;
+  }
+</style>
