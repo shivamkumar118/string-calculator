@@ -12,6 +12,7 @@
 import { add } from "@/utils/calculator.js";
 
 export default {
+  name: "StringCalculator",
   data() {
     return {
       inputString: "",
