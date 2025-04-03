@@ -1,10 +1,10 @@
 <template>
   <div class="calculator">
     <h1>String Calculator</h1>
-    <input placeholder="Enter numbers" />
+    <input v-model="inputString" placeholder="Enter numbers..." />
     <button>Calculate</button>
-    <p>Result:</p>
-    <p class="error"></p>
+    <p>Result: {{ result }}</p>
+    <p class="error">{{ errorMessage }}</p>
   </div>
 </template>
 
