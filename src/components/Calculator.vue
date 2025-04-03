@@ -30,16 +30,22 @@ export default {
         }
       }
 
-      const numArray = numbers.split(delimiter).map(num => parseInt(num, 10));
-      const negatives = numArray.filter(num => num < 0);
+      const parseNumbers = numbers
+        .split(delimiter)
+        .map((num) => parseInt(num, 10));
+      this.validateNegatives(parseNumbers);
 
+      return parseNumbers.reduce((sum, num) => sum + num, 0);
+    },
+
+    validateNegatives(numbers) {
+      const negatives = numbers.filter((num) => num < 0);
       if (negatives.length) {
-        throw new Error(`Negative numbers not allowed: ${negatives.join(", ")}`);
+        throw new Error(
+          `Negative numbers not allowed: ${negatives.join(", ")}`
+        );
       }
-
-      return numArray.reduce((sum, num) => sum + num, 0);
-    }
-
+    },
   },
 };
 </script>
