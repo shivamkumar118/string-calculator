@@ -11,7 +11,9 @@
 export default {
   data() {
     return {
-      result: null
+      inputString: "",
+      result: null,
+      errorMessage: "",
     };
   },
 };
