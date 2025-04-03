@@ -19,7 +19,12 @@ export default {
   },
   methods: {
     calculate() {
-      this.result = this.add(this.inputString);
+      try {
+        this.errorMessage = "";
+        this.result = this.add(this.inputString);
+      } catch (error) {
+        this.errorMessage = error.message;
+      }
     },
     add(numbers) {
       if (!numbers) return 0;
