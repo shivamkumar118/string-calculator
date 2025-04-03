@@ -17,16 +17,24 @@ export default {
       errorMessage: "",
     };
   },
+  methods: {
+    add(numbers) {
+      if (!numbers) return 0;
+
+      const numArray = numbers.split(/,|\n/).map((num) => parseInt(num, 10));
+      return numArray.reduce((sum, num) => sum + num, 0);
+    },
+  },
 };
 </script>
 
 <style>
-  .calculator {
-    max-width: 400px;
-    margin: auto;
-    text-align: center;
-  }
-  .error {
-    color: red;
-  }
+.calculator {
+  max-width: 400px;
+  margin: auto;
+  text-align: center;
+}
+.error {
+  color: red;
+}
 </style>
