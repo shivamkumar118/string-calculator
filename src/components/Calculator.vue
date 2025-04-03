@@ -4,6 +4,7 @@
     <input placeholder="Enter numbers" />
     <button>Calculate</button>
     <p>Result:</p>
+    <p class="error"></p>
   </div>
 </template>
 
@@ -24,5 +25,8 @@ export default {
     max-width: 400px;
     margin: auto;
     text-align: center;
+  }
+  .error {
+    color: red;
   }
 </style>
