@@ -10,9 +10,13 @@ export function add(numbers) {
     }
   }
 
-  const parsedNumbers = numbers
-    .split(delimiter)
-    .map((num) => parseInt(num, 10));
+  const parsedNumbers = numbers.split(delimiter).map((num) => {
+    if (isNaN(num) || num.trim() === "") {
+      throw new Error(`Invalid number found: ${num}`);
+    }
+    return parseInt(num, 10);
+  });
+
   validateNegatives(parsedNumbers);
 
   return parsedNumbers.reduce((sum, num) => sum + num, 0);
