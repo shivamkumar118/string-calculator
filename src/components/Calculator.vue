@@ -1,7 +1,7 @@
 <template>
   <div class="calculator">
     <h1>String Calculator</h1>
-    <input v-model="inputString" placeholder="Enter numbers..." />
+    <input v-model.trim="inputString" placeholder="Enter numbers..." />
     <button @click="calculate">Calculate</button>
     <p v-if="result !== null">Result: {{ result }}</p>
     <p v-if="errorMessage" class="error">{{ errorMessage }}</p>
