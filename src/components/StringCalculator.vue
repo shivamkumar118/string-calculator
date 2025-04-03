@@ -28,11 +28,11 @@ export default {
     calculate() {
       try {
         this.errorMessage = "";
-        this.result = add(this.inputString);
+        this.result = add(this.inputString.trim());
       } catch (error) {
         this.errorMessage = error.message;
       }
-    },
+    }
   },
 };
 </script>
