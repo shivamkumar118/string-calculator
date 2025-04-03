@@ -9,6 +9,8 @@
 </template>
 
 <script>
+import { add } from "@/utils/calculator.js";
+
 export default {
   data() {
     return {
@@ -21,37 +23,9 @@ export default {
     calculate() {
       try {
         this.errorMessage = "";
-        this.result = this.add(this.inputString);
+        this.result = add(this.inputString);
       } catch (error) {
         this.errorMessage = error.message;
-      }
-    },
-    add(numbers) {
-      if (!numbers) return 0;
-
-      let delimiter = /,|\n/;
-      if (numbers.startsWith("//")) {
-        const delimiterMatch = numbers.match(/^\/\/(.+)\n/);
-        if (delimiterMatch) {
-          delimiter = new RegExp(delimiterMatch[1]);
-          numbers = numbers.split("\n").slice(1).join("\n");
-        }
-      }
-
-      const parseNumbers = numbers
-        .split(delimiter)
-        .map((num) => parseInt(num, 10));
-      this.validateNegatives(parseNumbers);
-
-      return parseNumbers.reduce((sum, num) => sum + num, 0);
-    },
-
-    validateNegatives(numbers) {
-      const negatives = numbers.filter((num) => num < 0);
-      if (negatives.length) {
-        throw new Error(
-          `Negative numbers not allowed: ${negatives.join(", ")}`
-        );
       }
     },
   },
