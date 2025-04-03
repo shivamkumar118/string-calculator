@@ -3,8 +3,8 @@
     <h1>String Calculator</h1>
     <input v-model="inputString" placeholder="Enter numbers..." />
     <button>Calculate</button>
-    <p>Result: {{ result }}</p>
-    <p class="error">{{ errorMessage }}</p>
+    <p v-if="result !== null">Result: {{ result }}</p>
+    <p v-if="errorMessage" class="error">{{ errorMessage }}</p>
   </div>
 </template>
 
